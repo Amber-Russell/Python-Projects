@@ -1,29 +1,27 @@
+import sqlite3
 
+conn = sqlite3.connect('test1.db')
 
+with conn:
+    cur = conn.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS tbl_fileList( \
+        ID INTEGER PRIMARY KEY AUTOINCREMENT, \
+        col_fname TEXT, \
+        col_form TEXT)")
+    conn.commit()
 
-def getInfo():
-    var1 = input("\nPlease provide the first numeric value:")
-    var2 = input("\nPlease provide the second numeric value:")
-    return var1,var2
+conn = sqlite3.connect('test1.db')
 
+fileList = ('information.docx', 'Hello.txt', 'myImage.png', 'myMovie.mpg', \
+            'World.txt', 'data.pdf', 'myPhoto.jpg')
 
-def compute():
-    go = True
-    while go:
-        var1,var2 = getInfo()
-        try:
-            var3 = int(var1) + int(var2)
-            go = False
-        except ValueError as e:
-            print("{}: \nYou did not provide a numeric value!".format(e))
-        except:
-            print("\n\nOops, you provided invalid inout, program will close now!")
-    print("{} {} = {}",format(var1,var2,var3))
-
-
-
-
-
-
-if __name__=="__main__":
-    compute()
+#loop through each object in the tuple to find the names that end in y.
+for x in fileList:
+    if x.endswith('.txt'):
+        with conn:
+            cur = conn.cursor()
+        #The value for each row will be one name out of the tuple therefore (x,)
+        #will denote a one element tuple for each name ending with y.
+            cur.execute("INSERT INTO tbl_fileList (col_fname) VALUES (?)",(x,))
+            print(x)
+conn.close()
