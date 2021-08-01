@@ -20,7 +20,7 @@ class Staff(Teacher):
     pin_number = "1234"
 
     #this is the same method in the parent class "Teacher"
-        #the difference is that, instead of using entry_password, we are using entry_pin.
+    #the difference is that, instead of using entry_password, we are using entry_pin.
 
     def getLoginInfo(self):
         entry_name = input("")
