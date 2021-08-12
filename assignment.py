@@ -23,7 +23,7 @@ def create_html():
 
     
 window = Tk()
-window.geometry("500x600")
+window.geometry("500x500")
 lbl_input = Label(window,text='Enter a sentence:')
 lbl_input.grid(row=0,column=0,padx=(27,0),pady=(10,0),sticky=N+W)
 

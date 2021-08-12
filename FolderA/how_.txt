@@ -1,0 +1,64 @@
+How a loop works:
+
+For example, you could direct the computer to search through a list of paint colors until the color “red” is found. The list the computer will search is this:
+
+
+Blue
+
+Yellow
+
+Red
+
+Orange
+
+White
+
+Here is what it could look like in pseudocode:
+
+
+Step 1: Get the next consecutive item in the list.
+
+
+Step 2: Check whether the item equals “Red.”
+
+
+Step 3: If the item equals “Red,” exit this loop.
+
+
+Step 4: If the item is not equal to “Red,” loop back to step 1.
+
+
+When this loop is executed, it will run like this:
+
+
+Step 1: Acquired “Blue”
+
+
+Step 2: Checked if item “Blue” is equal to “Red”
+
+
+Step 3: Item not equal to “Red.” Did not exit the loop.
+
+
+Step 4: Item not equal to “Red.” Looped back to Step 1.
+
+
+Step 1: Acquired “Yellow”
+
+
+Step 2: Checked if item “Yellow” is equal to “Red”
+
+
+Step 3: Item not equal to “Red.” Did not exit the loop.
+
+
+Step 4: Item not equal to “Red.” Looped back to Step 1.
+
+
+Step 1: Acquired “Red”
+
+
+Step 2: Checked if item “Red” is equal to “Red”
+
+
+Step 3: Item equal to “Red.” Exited the loop.

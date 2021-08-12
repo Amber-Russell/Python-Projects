@@ -2,17 +2,17 @@ import os
 import tkinter as tk
 from tkinter import *
 
-f = open('C:\Users\Sudent\Documents\GitHub\Python-Projects\file_transfer_assignment.py')
+f = open('./FolderA/file3.txt','a')
 #wildcard in the center of html to add user input
 f.close()
-f = open( 'C:\Users\Sudent\Documents\GitHub\Python-Projects\file_transfer_assignment.py', "r")
+f = open( './FolderA/file3.txt', "r")
 print(f.read())
 
 
 
 
 window = Tk()
-window.geometry("500x600")
+window.geometry("500x200")
 lbl_input = Label(window,text='Choose a file from Directory')
 lbl_input.grid(row=0,column=0,padx=(27,0),pady=(10,0),sticky=N+W)
 
