@@ -19,7 +19,7 @@ lbl_input.grid(row=0,column=0,padx=(27,0),pady=(10,0),sticky=N+W)
 
 
 
-btn_add = Button(window,width=12,height=2,text='Browse Files',command=lambda: create_html())
+btn_add = Button(window,width=12,height=2,text='Browse Files',command=lambda:())
 btn_add.grid(row=3,column=1,padx=(27,0),pady=(10,0),sticky=W)
 
 if __name__=="__main__":

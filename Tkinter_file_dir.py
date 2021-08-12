@@ -4,15 +4,6 @@ from  tkinter import filedialog
 import shutil
 import os
 
-#path to browse files
-path = 'C:/folderA'
-
-#folder source
-source = 'C:/FolderA/html_file.txt'
-
-#where the moved folders will go
-destination = 'C:/FolderB/html_file_copy.txt'
-
 #open directory
 root = tkinter.Tk()
 root.directory = filedialog.askdirectory()
@@ -23,9 +14,13 @@ window_main.geometry("400x200")
  
 def submitFunction() :
     print('Choose a file')
+
+
+
+btn_Browse1 = Button(m, text="Browse...", padx=20, command=pickSourceDir)btn_Browse1.grid(row=0, column=0, padx=(20, 10), pady=(30, 0))
+
+btn_Browse2 = Button(m, text="Browse...", padx=20, command=pickDestDir)btn_Browse2.grid(row=1, column=0, padx=(20, 10), pady=10)
+
  
-button_submit = tkinter.Button(window_main, text ="Files", command=submitFunction)
-button_submit.config(width=20, height=2)
- 
-button_submit.pack()
 window_main.mainloop()
+
