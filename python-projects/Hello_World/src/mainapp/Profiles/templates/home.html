@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Hello World{% endblock %}
+
+{% block header %}My Project{% endblock %}
+
+{% block content %}
+{% for users in users %}
+    <ul>
+        {% if users == "Tina" %}
+        <li>Hello{{ users }}</li>
+        {% else %}
+        <li>{{ users }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}
