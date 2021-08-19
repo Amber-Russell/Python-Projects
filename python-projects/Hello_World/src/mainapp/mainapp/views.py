@@ -3,8 +3,8 @@ from django.shortcuts import render
 
 
 def home(request):
-    users = ["Adam","Jerry", "Tommy", "Sarah","Tina"]
+    users = ["Adam", "Jerry", "Tommy", "Sarah", "Tina"]
     context = {
-        'users':users,
+        'users': users,
     }
     return render(request, "home.html", context)
