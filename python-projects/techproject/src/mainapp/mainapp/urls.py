@@ -10,5 +10,4 @@ urlpatterns = [
     path('admin/', views.home, name="home"),
     path('', include('products.urls')),
 ]
-
 urlpatterns += staticfiles_urlpatterns()
