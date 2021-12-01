@@ -1,15 +1,31 @@
+
+
+
+
+
 def getNumbers(num1, num2):
     results = num1 * num2
     return results
 
-person1 = {
-    "name" : "John",
-    "age" : 36,
-    "country" : "Norway"
-    }
 
 
 
 
-if __name__ == "__main__":pass
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if __name__=="__main__":
+    pass
